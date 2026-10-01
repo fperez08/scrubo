@@ -1,0 +1,25 @@
+# scrubo rules file
+# Lines starting with '#' are comments and are ignored.
+# Lines starting with 'regex:' are treated as regex patterns.
+# All other lines are exact string matches (case-insensitive by default).
+
+# --- Personal identifiers ---
+John Doe
+123 Main Street
+Anytown, CA 90210
+
+# --- Account / card numbers (exact) ---
+# 1234567890
+
+# --- Regex patterns for structured PII ---
+# Credit/debit card numbers (with dashes or spaces)
+# regex:\d{4}[-\s]\d{4}[-\s]\d{4}[-\s]\d{4}
+
+# US Social Security Number
+# regex:\b\d{3}-\d{2}-\d{4}\b
+
+# US phone number formats
+# regex:\(?\d{3}\)?[-.\s]\d{3}[-.\s]\d{4}
+
+# Email address
+# regex:[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}
